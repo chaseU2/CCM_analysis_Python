@@ -1,4 +1,5 @@
 # CCM Analysis Package
+[![PyPI version](https://img.shields.io/pypi/v/ccm-analysis.svg)](https://pypi.org/project/ccm-analysis/)
 
 This package performs **Convergent Cross Mapping (CCM) analysis** to infer causal relationships in time series data.  
 It is optimized for `.py` scripts and standalone Python usage.
