@@ -46,3 +46,19 @@ results = run_ccm_analysis(
 # The results will be stored in the `results` variable.
 # You can further use or save the results.
 
+```
+
+## Test Dataset
+
+You can test the `ccm_analysis` package using the sample dataset provided in this repository. You can download the test dataset from the following link:
+
+- [Test Dataset (ccm_test_data.txt)](https://github.com/chaseU2/ccm-analysis-tool/blob/master/ccm_test_data.txt)
+
+### Data Format
+
+The dataset is structured as follows:
+
+- **Columns** represent the variables you want to analyze.
+- **Rows** represent the time points for each variable.
+
+
