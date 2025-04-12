@@ -63,3 +63,67 @@ The dataset is structured as follows:
 - **Columns** represent the variables you want to analyze.
 - **Rows** represent the time points for each variable.
 
+
+---
+
+## Interpreting Convergence Plots
+
+The package generates diagnostic convergence plots that reveal causal relationships between variables. Below are the three characteristic patterns to analyze:
+
+
+When analyzing convergence plots, you'll be prompted:
+
+```python
+Analyzing: A ↔ B
+Final ρ: A→B: 0.82, B→A: 0.41
+
+Convergence in? (1=both, 2=A→B only, 3=B→A only, 0=none): 
+```
+p is in this case the calculated crossmap score 
+
+### Options Table
+| Key | Action                  |
+|-----|-------------------------|
+| 1   | Keep both directions    |
+| 2   | Keep only A→B           |
+| 3   | Keep only B→A           |
+| 0   | Discard both            |
+
+---
+
+### 1. No Significant Causality
+
+![No Causal Relationship](https://raw.githubusercontent.com/chaseU2/CCM_analysis_Python/main/ccm_analysis/Screenshot%204.png)
+
+- Neither directional curve (X→Y in blue, Y→X in red) show a clear convergence to a final crossmap score
+- Example use case: Independent systems
+
+---
+
+### 2. Unidirectional Causality
+![Unidirectional Causality](https://raw.githubusercontent.com/chaseU2/CCM_analysis_Python/main/ccm_analysis/Screenshot%203.png)
+
+- One direction (X→Y) converges to a final crossmap score
+- Reverse direction (Y→X) does ot show a clear convegence
+- Interpretation: X drives Y but not vice versa
+- Pay attention to whether convergence is present in the X→Y or Y→X plot, and enter 2 or 3 accordingly
+
+---
+
+### 3. Bidirectional Causality
+![Bidirectional Causality](https://raw.githubusercontent.com/chaseU2/CCM_analysis_Python/main/ccm_analysis/Screenshot%204.pngg)
+
+- Both directions show positive convergence
+- Typical of feedback systems
+- Convergence rates may differ (e.g., X→Y stronger than Y→X)
+
+
+---
+
+## Dependencies and Acknowledgements
+
+Parts of this project are based on the Convergent Cross Mapping (CCM) implementation from the following repository from Prince Javier :
+
+- [Convergent Cross Mapping GitHub Repository Prince Javier ](https://github.com/PrinceJavier/causal_ccm.git)
+
+I have utilized parts of the CCM algorithm from this repository to help analyze causality in time series data in my own project.
