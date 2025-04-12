@@ -111,7 +111,7 @@ p is in this case the calculated crossmap score
 ---
 
 ### 3. Bidirectional Causality
-![Bidirectional Causality](https://raw.githubusercontent.com/chaseU2/CCM_analysis_Python/main/ccm_analysis/Screenshot%204.pngg)
+![Bidirectional Causality](https://raw.githubusercontent.com/chaseU2/CCM_analysis_Python/main/ccm_analysis/Screenshot%204.png)
 
 - Both directions show positive convergence
 - Typical of feedback systems
